@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from '@/router'
 import vuetify from './plugins/vuetify';
 import Vuelidate from 'vuelidate'
+import axios from 'axios';
+axios.defaults.baseURL="https://code2-hrmbackend-emh.herokuapp.com"
 
 Vue.use(Vuelidate)
 Vue.config.productionTip = false

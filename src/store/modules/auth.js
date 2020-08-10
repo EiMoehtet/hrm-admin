@@ -14,12 +14,12 @@ const actions={
     async login({commit},data){
         var formData=new FormData();
         formData.append('grant_type','password');
-        formData.append('client_id',2);
-        formData.append('client_secret','dQ3xiSTe3kzp8GrM3LkelNLqcQIMi5NyCSnqBMk1');
+        formData.append('client_id',1);
+        formData.append('client_secret','3LSDMcRNpqZNo7G3VRpIy4YR8EVm1pYtgzhjHVJz');
         formData.append('username',data.email);
         formData.append('password',data.password);
         formData.append('scope','');
-        const res=await axios.post("http://localhost:8000/oauth/token",formData,{headers:{'Content-Type':'multipart/form-data'}});
+        const res=await axios.post("/oauth/token",formData,{headers:{'Content-Type':'multipart/form-data'}});
         console.log(res.data);
         commit('storeAccessToken',res.data.access_token);
 
